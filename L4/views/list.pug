@@ -1,0 +1,9 @@
+doctype html
+html
+    head
+        title All dictons
+    body
+    ul
+        each dicton in dictons
+            li
+                a(href='/' + dicton.id) #{dicton.dicton}

@@ -1,0 +1,188 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --grey-100: #f3f4f6;
+  --grey-200: #e5e7eb;
+  --grey-400: #9ca3af;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--black);
+  background: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+FONTS
+**/
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 60px; /* 125% */
+}
+
+.subtitle1 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px; /* 150% */
+}
+
+.body1 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px; /* 150% */
+}
+
+.subtitle2 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px; /* 150% */
+}
+
+.body2 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px; /* 150% */
+}
+
+.overline {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px; /* 150% */
+}
+
+/**
+LAYOUT
+**/
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+          "main queue"
+          "player player";
+}
+
+/**
+MAIN
+**/
+
+.main {
+  grid-area: main;
+  margin-left: 86px;
+  padding-top: 86px;
+  padding-bottom: 86px;
+  overflow: auto;
+}
+
+.containerHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.containerInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: flex-end;
+}
+
+.track-image {
+  width: 250px;
+  height: 250px;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-top: 48px;
+  gap: 32px;
+}
+
+/*
+PLAYER
+*/
+
+#player {
+  grid-area: player;
+  display: flex;
+  height: 80px;
+  border-top: var(--grey-200) 1px solid;
+  align-items: center;
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-basis: calc(100%/3);
+}
+
+.cover {
+  max-height: 100%;
+  padding-right: 16px;
+}
+
+.buttonsDisplay {
+  display:flex;
+  gap: 32px;
+  justify-content: center;
+  flex-basis: calc(100%/3);
+}
+
+.buttons {
+  height: 40px;
+  width: 40px;
+}
+
+.deezer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 16px;
+  flex-basis: calc(100%/3);
+}
+
+.deezer-logo {
+  width: 150px;
+}
+
+/*
+QUEUE
+*/
+
+#queue {
+  position: relative;
+  grid-area: queue;
+  width: 330px;
+  background-color: var(--grey-100);
+  border-left: var(--grey-200) 1px solid;
+}
+
+.top-left-item {
+  padding-top: 32px;
+  padding-left: 32px;
+}
+
+.centered-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--grey-400);
+}

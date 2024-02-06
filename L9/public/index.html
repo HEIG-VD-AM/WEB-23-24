@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body>
+
+    <div class="header">
+        <div id="commands-menu" class="commands-menu">
+            <span><code>!join</code> - Rejoindre une équipe</span>
+            <span><code>!r</code> - Déplacer à droite</span>
+            <span><code>!l</code> - Déplacer à gauche</span>
+            <span><code>!d</code> - Descendre la pièce</span>
+            <span><code>!rr</code> - Rotation droite</span>
+            <span><code>!rl</code> - Rotation gauche</span>
+        </div>
+    </div>
+
+
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <h2>Commandes de jeu</h2>
+            <ul>
+                <li><code>!join</code> - Rejoindre une équipe</li>
+                <li><code>!r</code> - Déplacer à droite</li>
+                <li><code>!l</code> - Déplacer à gauche</li>
+                <li><code>!d</code> - Descendre la pièce</li>
+                <li><code>!rr</code> - Rotation droite</li>
+                <li><code>!rl</code> - Rotation gauche</li>
+                <li><code>!anarchy</code> - Mode Anarchie</li>
+                <li><code>!democracy</code> - Mode Démocratie</li>
+            </ul>
+            <div class="separator"></div>
+            <div id="vote-results" class="vote-results">
+                <h2>Résultats du vote</h2>
+                <div id="vote-anarchy" class="vote-bar">
+                    <span class="vote-label">Anarchie: </span>
+                    <span class="vote-count" id="anarchy-count">0</span>
+                </div>
+                <div id="vote-democracy" class="vote-bar">
+                    <span class="vote-label">Démocratie: </span>
+                    <span class="vote-count" id="democracy-count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="game">
+        </div>
+    </div>
+
+    <div id="winner-popup" class="popup-container">
+        <div class="popup-content">
+        </div>
+    </div>
+
+    <script src="scripts/tmi.js"></script>
+    <script src="/src/app.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+doctype html
+html
+    head
+    body
+        form(action='/create', method='POST')
+            p
+                | Dicton:
+                input(name='dicton', value='', type='text')
+            button(type='submit') New dicton

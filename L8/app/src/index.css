@@ -1,0 +1,29 @@
+.container {
+    margin: 0.5em;
+    margin-bottom: 5em;
+}
+
+.overlay-play {
+    position: absolute;
+    color: white;
+    top: 24px;
+    left: 32px;
+}
+
+.powered-by-deezer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.powered-by-text {
+    font-size: 12px;
+    color: #000; 
+}
+
+.deezer-logo {
+    width: 100px; 
+    height: auto;
+}
+
